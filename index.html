@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procesar Archivos CSV_1</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+    <div class="container d-flex justify-content-center align-items-center min-vh-100">
+        <div class="w-50">
+            <h1 class="text-center mt-5">Evaluar archivos</h1>
+            <form id="uploadForm" enctype="multipart/form-data" class="mb-5">
+                <div class="form-group">
+                    <label for="file1">Cargue cada uno de los archivos en formato CSV.</label><br>
+                    <label for="file1">Estado 5:</label>
+                    <input type="file" class="form-control-file" id="file1" name="file1">
+                </div>
+                <div class="form-group">
+                    <label for="file2">Estado 8:</label>
+                    <input type="file" class="form-control-file" id="file2" name="file2">
+                </div>
+                <div class="form-group">
+                    <label for="file3">Ejecutadas:</label>
+                    <input type="file" class="form-control-file" id="file3" name="file3">
+                </div>
+                <button type="button" class="btn btn-primary w-100" onclick="uploadFiles()">Cargar</button>
+            </form>
+            <a id="downloadLink" href="#" class="btn btn-success w-100" download="combined.csv" style="display: none;">Descargar archivo combinado</a>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.0/papaparse.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
